@@ -1,6 +1,6 @@
 package io.sudmonkey.web;
 
-import io.sudmonkey.domain.Journal;
+import io.sudmonkey.domain.JournalEntry;
 import io.sudmonkey.repository.JournalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -25,7 +25,7 @@ public class JournalController {
 
     @RequestMapping(value = "/journal", produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     public @ResponseBody
-    List<Journal> getJournal() {
+    List<JournalEntry> getJournal() {
         return repository.findAll();
     }
 }
